@@ -1,0 +1,14 @@
+.shop {
+  padding: 20px;
+}
+
+.shop h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.shop-category {
+  margin: 20px 0;
+}
+
