@@ -2,9 +2,14 @@ import React from 'react';
 import './ProductDisplay.css';
 import star_icon from '../Assets/star_icon.png';
 import star_dull_icon from '../Assets/star_dull_icon.png';
+import { useShopContext } from '../../contexts/ShopContext';
 
-const ProductDisplay = ( props) => {
+const ProductDisplay = (props) => {
     const {product} = props;
+    const {addToCart} = useShopContext();
+
+
+
 
   return (
     <div className='productdisplay'>
@@ -23,10 +28,10 @@ const ProductDisplay = ( props) => {
         <div className="productdisplay-right">
             <h1>{product.name}</h1>
             <div className="productdisplay-right-stars">
-                <img src={star_icon} alt="" />
-                <img src={star_icon} alt="" />
-                <img src={star_icon} alt="" />
-                <img src={star_icon} alt="" />
+                <img src={star_icon} alt=""/>
+                <img src={star_icon} alt=""/>
+                <img src={star_icon} alt=""/>
+                <img src={star_icon} alt=""/>
                 <img src={star_dull_icon} alt="empty rating star" />
                 <p>(120)</p>
             </div>
@@ -55,7 +60,7 @@ const ProductDisplay = ( props) => {
 
                 
             </div>
-            <button>ADD TO CARD</button>
+            <button onClick={()=>addToCart(product.id)}>ADD TO CARD</button>
             <p className='productdisplay-right-category'>
                 <span>Category:</span>
                 Women, T-shirt, Crop-Top

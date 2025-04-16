@@ -15,6 +15,7 @@ const Item = ({ id, image, name, new_price, old_price }) => {
     <div className='item'>
       <Link to={`/product/${id}`}>
         <img 
+        onClick={window.scrollTo(0,0) }
           src={image} 
           alt={`${name} product image`}
           width="350"
